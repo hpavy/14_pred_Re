@@ -60,7 +60,7 @@ def train(
             pred_pde1, pred_pde2, pred_pde3 = pde(
                 pred_pde,
                 X_pde_batch,
-                Re=Re*Re_pred,
+                Re=torch.abs(Re*Re_pred),
                 x_std=x_std,
                 y_std=y_std,
                 u_mean=u_mean,

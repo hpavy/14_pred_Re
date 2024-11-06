@@ -61,8 +61,8 @@ def charge_data(hyper_param):
     X_full = np.array([x_norm_full, y_norm_full, t_norm_full], dtype=np.float32).T
     U_full = np.array([u_norm_full, v_norm_full, p_norm_full], dtype=np.float32).T
 
-    x_int = (x_norm_full.max()-x_norm_full.min())/6
-    y_int = (y_norm_full.max()-y_norm_full.min())/6
+    x_int = (x_norm_full.max()-x_norm_full.min())/hyper_param['nb_points_axes']
+    y_int = (y_norm_full.max()-y_norm_full.min())/hyper_param['nb_points_axes']
     X_train = np.zeros((0, 3))
     U_train = np.zeros((0, 3))
     for time in np.unique(t_norm_full):
@@ -111,7 +111,6 @@ def charge_data(hyper_param):
     }
 
     return X_train, U_train, X_full, U_full, mean_std
-
 
 def init_model(f, hyper_param, device, folder_result):
     model = PINNs(hyper_param).to(device)

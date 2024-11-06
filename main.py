@@ -16,7 +16,7 @@ time_start = time.time()
 
 ############# VARIABLES ################
 
-folder_result_name = "7_stronger"  # name of the result folder
+folder_result_name = "1_first_try"  # name of the result folder
 folder_result = "results/" + folder_result_name
 
 
@@ -37,11 +37,11 @@ hyper_param_init = {
     "Re": 100,
     "lr_init": 1e-3,  # Learning rate at the begining of training
     "gamma_scheduler": 0.999,  # Gamma scheduler for lr
-    "nb_layers": 1,
-    "nb_neurons": 64,
+    "nb_layers": 10,
+    "nb_neurons": 32,
     "n_pde_test": 5000,
     "n_data_test": 5000,
-    "nb_points_axes": 6,  # le nombre de points pris par axe par pas de temps
+    "nb_points_axes": 8,  # le nombre de points pris par axe par pas de temps
     "x_min": 0.02,
     "x_max": 0.2,
     "y_min": -0.06,
