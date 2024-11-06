@@ -1,0 +1,1 @@
+On essaye avec uniquement la data en z=0 voir si ça change beaucoup 
